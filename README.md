@@ -67,30 +67,37 @@ tynecxio/
 ## 🚀 Getting Started (Local Development)
 
 ### 1️⃣ Install dependencies
+
 ```bash
 cd client
 npm install
-2️⃣ Run the development server
-bash
-Copy code
+```
+
+### 2️⃣ Run the development server
+
+```bash
 npm run dev
-Open in browser:
+```
+
+Open in browser:  
 👉 http://localhost:5173
 
 📩 Contact Form & Email Setup (Resend)
+
 This project uses Resend with a Vercel Serverless Function.
 
 Required Environment Variables (Vercel)
-Add these in Vercel → Project → Settings → Environment Variables:
 
-env
-Copy code
+Add these in:
+
+Vercel → Project → Settings → Environment Variables
+```bash
 RESEND_API_KEY=your_resend_api_key
 CONTACT_TO_EMAIL=career@tynecxio.com
 CONTACT_FROM_EMAIL=TynecXio <no-reply@tynecxio.com>
-CONTACT_FROM_EMAIL must be a verified sender in Resend.
-
+```
 🌍 Deployment
+
 The website is deployed using Vercel with automatic CI/CD from GitHub.
 
 Push to main branch
@@ -101,11 +108,9 @@ Serverless API available at /api/contact
 
 Live URL:
 👉 https://tynecxio.com
----
-
-
 
 📬 Contact
+
 For business inquiries or collaboration:
 📧 career@tynecxio.com
 
