@@ -98,7 +98,9 @@ Live URL:
 ---
 ## 🌐 Live Preview
 
-![TynecXio Website Preview](client/public/preview.png)
+<p align="center">
+  <img src="./client/public/preview.png" alt="TynecXio Website Preview" width="100%" />
+</p>
 
 
 
