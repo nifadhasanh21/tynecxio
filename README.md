@@ -56,9 +56,6 @@ tynecxio/
 ├─ package.json
 └─ README.md
 
-yaml
-Copy code
-
 ---
 
 ## 🚀 Getting Started (Local Development)
