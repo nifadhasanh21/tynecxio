@@ -95,10 +95,10 @@ Serverless API available at /api/contact
 
 Live URL:
 👉 https://tynecxio.com
-
+---
 ## 🌐 Live Preview
 
-<img width="1898" height="864" alt="image" src="https://github.com/user-attachments/assets/53d94127-e7b9-4a6a-84be-d3e7ed9ad409" />
+![TynecXio Website Preview](client/public/preview.png)
 
 
 
