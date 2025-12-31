@@ -1,5 +1,9 @@
 # TynecXio — Official Website
 
+![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black)
+![Vite](https://img.shields.io/badge/Built%20with-Vite-646CFF)
+![React](https://img.shields.io/badge/React-61DAFB)
+
 Premium agency website for **TynecXio** (Design • Development • Growth).  
 Built with **Vite + React** and deployed on **Vercel**, including a serverless contact API.
 
