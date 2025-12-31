@@ -34,6 +34,11 @@ RESEND_API_KEY = your key
 
 CONTACT_TO_EMAIL = your receiving email
 
+![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black)
+![Vite](https://img.shields.io/badge/Built%20with-Vite-646CFF)
+![React](https://img.shields.io/badge/React-61DAFB)
+
+
 CONTACT_FROM_EMAIL = your verified sender email (Resend)
 
 🌍 Deployment
