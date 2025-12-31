@@ -98,9 +98,15 @@ Live URL:
 
 ## 🌐 Live Preview
 
-![TynecXio Website Preview](client/public/preview.png)
+<img width="1898" height="864" alt="image" src="https://github.com/user-attachments/assets/53d94127-e7b9-4a6a-84be-d3e7ed9ad409" />
+
 
 
 📬 Contact
 For business inquiries or collaboration:
 📧 career@tynecxio.com
+
+📄 License
+
+© 2025 TynecXio. All rights reserved.
+This repository is proprietary and maintained by TynecXio.
