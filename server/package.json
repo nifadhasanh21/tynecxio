@@ -1,5 +1,5 @@
 {
-  "name": "novawave-server",
+  "name": "tynecxio-server",
   "version": "1.0.0",
   "type": "module",
   "main": "src/app.js",
