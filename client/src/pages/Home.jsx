@@ -329,7 +329,7 @@ export default function Home() {
       </Section>
 
       {/* WHY CHOOSE US */}
-      <Section id="about" title="Why Work With NovaWave Studio?" subtitle="">
+      <Section id="about" title="Why Work With TynecXio?" subtitle="">
         <motion.div
           className="grid grid2"
           variants={stagger}
