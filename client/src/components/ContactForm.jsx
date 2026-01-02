@@ -1,117 +1,84 @@
 import { useState } from "react";
-import MagneticButton from "./MagneticButton.jsx";
+import emailjs from "@emailjs/browser";
 
 export default function ContactForm() {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    service: "UI/UX Design",
-    budget: "$350 - $600",
-    message: ""
-  });
-
-  const [status, setStatus] = useState({ type: "", msg: "" });
   const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState({ type: "", msg: "" });
 
-  function update(k, v) {
-    setForm((p) => ({ ...p, [k]: v }));
-  }
-
-  async function onSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
-    setStatus({ type: "", msg: "" });
     setLoading(true);
+    setStatus({ type: "", msg: "" });
 
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form)
-      });
+      await emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        e.currentTarget,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      );
 
-      const data = await res.json();
-
-      if (!res.ok) {
-        setStatus({ type: "error", msg: data?.message || "Something went wrong." });
-      } else {
-        setStatus({ type: "success", msg: "Thanks! We received your message." });
-        setForm({ name: "", email: "", service: "UI/UX Design", budget: "$350 - $600", message: "" });
-      }
+      setStatus({ type: "success", msg: "Message sent successfully!" });
+      e.currentTarget.reset();
     } catch (err) {
-      setStatus({ type: "error", msg: "Network error. Please try again." });
+      console.log("EmailJS Error:", err);
+      setStatus({ type: "error", msg: "Email failed. Please try again." });
     } finally {
       setLoading(false);
     }
   }
 
   return (
-    <form className="card lift" onSubmit={onSubmit}>
-      <div style={{ fontWeight: 950, fontSize: 20 }}>Send a message</div>
-      <p className="p">We reply within 24–48 hours.</p>
+    <form onSubmit={handleSubmit} className="card lift">
+      <div style={{ fontWeight: 950, fontSize: 22, marginBottom: 6 }}>Send a message</div>
+      <div className="small" style={{ marginBottom: 14 }}>We reply within 24–48 hours.</div>
 
-      <div className="row2" style={{ marginTop: 14 }}>
-        <input
-          className="input"
-          placeholder="Your name"
-          value={form.name}
-          onChange={(e) => update("name", e.target.value)}
-          required
-        />
-        <input
-          className="input"
-          placeholder="Your email"
-          value={form.email}
-          onChange={(e) => update("email", e.target.value)}
-          type="email"
-          required
-        />
+      <div className="grid" style={{ gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+        <input name="name" placeholder="Name *" required />
+        <input name="email" type="email" placeholder="Email *" required />
       </div>
 
-      <div className="row2" style={{ marginTop: 12 }}>
-        <select className="select" value={form.service} onChange={(e) => update("service", e.target.value)}>
-          <option>UI/UX Design</option>
-          <option>Website / Web App</option>
-          <option>E-Commerce Store</option>
-          <option>Mobile App UI</option>
-          <option>Brand Identity</option>
-          <option>Marketing & Growth</option>
+      <div className="grid" style={{ gridTemplateColumns: "1fr 1fr", gap: 12, marginTop: 12 }}>
+        <select name="service" required defaultValue="General / Not sure">
+          <option value="General / Not sure">General / Not sure</option>
+          <option value="UI/UX Design">UI/UX Design</option>
+          <option value="Website / Web App Development">Website / Web App Development</option>
+          <option value="E-Commerce Store">E-Commerce Store</option>
+          <option value="Mobile App UI">Mobile App UI</option>
+          <option value="Brand Identity & Graphics">Brand Identity & Graphics</option>
+          <option value="Digital Marketing & Growth">Digital Marketing & Growth</option>
         </select>
 
-        <select className="select" value={form.budget} onChange={(e) => update("budget", e.target.value)}>
-          <option>$200 - $450</option>
-          <option>$350 - $600</option>
-          <option>$400 - $900</option>
-          <option>$500 - $1,000</option>
-          <option>$1,000+</option>
+        <select name="budget" defaultValue="$350 - $600">
+          <option value="$350 - $600">$350 - $600</option>
+          <option value="$400 - $900">$400 - $900</option>
+          <option value="$900+">$900+</option>
         </select>
       </div>
 
       <textarea
-        className="textarea"
-        style={{ marginTop: 12 }}
-        placeholder="Tell us about your project..."
-        value={form.message}
-        onChange={(e) => update("message", e.target.value)}
+        name="message"
+        placeholder="Project details *"
         required
+        style={{ marginTop: 12, minHeight: 140 }}
       />
 
-      <div style={{ marginTop: 14 }}>
-        <MagneticButton as="button" className="primary wide" type="submit" disabled={loading}>
-          {loading ? "Sending..." : "Send Message"}
-        </MagneticButton>
-      </div>
+      <button className="btn primary wide" type="submit" disabled={loading} style={{ marginTop: 12 }}>
+        {loading ? "Sending..." : "Send Message"}
+      </button>
 
       {status.msg && (
         <div
+          className="card"
           style={{
             marginTop: 12,
-            padding: "12px 14px",
-            borderRadius: 16,
-            border: "1px solid var(--line)",
-            background: status.type === "success" ? "rgba(34,197,94,.10)" : "rgba(239,68,68,.10)"
+            padding: 12,
+            borderRadius: 14,
+            background: status.type === "error" ? "rgba(255,80,80,0.12)" : "rgba(80,255,160,0.12)",
+            border: status.type === "error" ? "1px solid rgba(255,80,80,0.25)" : "1px solid rgba(80,255,160,0.25)"
           }}
         >
-          <b>{status.type === "success" ? "Success:" : "Error:"}</b> {status.msg}
+          <b>{status.type === "error" ? "Error:" : "Success:"}</b> {status.msg}
         </div>
       )}
     </form>
