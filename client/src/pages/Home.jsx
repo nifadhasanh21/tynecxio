@@ -281,7 +281,7 @@ export default function Home() {
       <section className="strip">
         <div className="container">
           <div className="small">
-            Trusted by startups, entrepreneurs, small businesses, and emerging brands across the globe. (Logos coming soon.)
+            Trusted by startups, entrepreneurs, and growing businesses worldwide.
           </div>
         </div>
       </section>
@@ -345,30 +345,7 @@ export default function Home() {
         </motion.div>
       </Section>
 
-      {/* PROCESS */}
-      <Section id="process" title="How We Work" subtitle="">
-        <motion.div
-          className="grid grid3"
-          variants={stagger}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          {[
-            ["Discovery Call", "Understand your goals, audience & requirements."],
-            ["Strategy & Proposal", "Scope, pricing, and project roadmap."],
-            ["Design & Review", "Wireframes, UI/UX, branding, layout & feedback."],
-            ["Development / Execution", "Build, optimize, refine, and test."],
-            ["Launch & Support", "Deployment + final improvements."],
-            ["Optional Ongoing Growth", "Updates, landing pages, marketing & scaling."]
-          ].map(([t, d]) => (
-            <motion.div className="card lift" key={t} variants={fadeUp}>
-              <div style={{ fontWeight: 950 }}>{t}</div>
-              <p className="p">{d}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </Section>
+    
 
       {/* PACKAGES */}
       <Section id="packages" title="📦 Package System" subtitle="">
