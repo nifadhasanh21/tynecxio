@@ -820,3 +820,73 @@ select.input option {
     height: 130px;
   }
 }
+
+
+/* New for line */
+
+.trust-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+}
+
+.trust-badge {
+  padding: 10px 22px;
+  font-size: 14px;
+  color: #d1d5db;
+  letter-spacing: 0.5px;
+  border-radius: 999px;
+
+  /* Glass / premium look */
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+
+  /* Soft glow */
+  box-shadow: 0 0 25px rgba(99, 102, 241, 0.15);
+
+  transition: all 0.3s ease;
+}
+
+.trust-badge:hover {
+  border-color: rgba(99, 102, 241, 0.5);
+  box-shadow: 0 0 35px rgba(99, 102, 241, 0.3);
+}
+
+/* Fix Contact section */
+.contactPoints div {
+  display: flex;
+  align-items: center;  /* vertical center flex items */
+  gap: 8px;             /* space between icon and text */
+  font-size: 16px;
+}
+
+.contactPoints div svg {
+  /* perfectly center the icon with the text */
+  display: inline-block;
+  transform: translateY(2px); /* nudge icon down */
+}
+
+/* Icons for why work with */
+.feature-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+/* Gradient Icon */
+.icon-accent {
+  background: linear-gradient(135deg, #8B5CF6, #22D3EE);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 18px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Optional: slightly softer text color to match dark theme */
+.feature-text {
+  color: #E5E7EB; /* soft gray instead of white */
+}

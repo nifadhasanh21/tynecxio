@@ -11,11 +11,11 @@ export default function Footer() {
           <span>•</span>
           <a href="#services">Services</a>
           <span>•</span>
+          <a href="#about">About</a>
+          <span>•</span>
           <a href="#packages">Packages</a>
           <span>•</span>
           <a href="#portfolio">Portfolio</a>
-          <span>•</span>
-          <a href="#about">About</a>
           <span>•</span>
           <a href="#contact">Contact</a>
         </nav>

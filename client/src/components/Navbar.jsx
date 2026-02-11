@@ -8,8 +8,8 @@ export default function Navbar() {
   const links = [
     ["Home", "#home"],
     ["Services", "#services"],
-    ["Packages", "#packages"],
     ["About", "#about"],
+    ["Packages", "#packages"],
     ["Portfolio", "#portfolio"],
     ["Contact", "#contact"]
   ];

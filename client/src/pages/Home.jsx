@@ -9,6 +9,9 @@ import ServiceCard from "../components/ServiceCard.jsx";
 import PackageCard from "../components/PackageCard.jsx";
 import FAQItem from "../components/FAQItem.jsx";
 import ContactForm from "../components/ContactForm.jsx";
+import { FaBullseye, FaBolt, FaHandshake, FaGlobe, FaCogs } from "react-icons/fa";
+
+
 
 const fadeUp = {
   hidden: { opacity: 0, y: 18 },
@@ -94,80 +97,91 @@ export default function Home() {
 
   const packages = [
     {
-      name: "🌟 Signature Launch Package",
+      name: "🌐 Website Design Package",
       tagline: "Brand + Website + Starter Marketing",
       includes: [
-        "Logo + mini brand identity",
-        "Up to 5-page modern website",
-        "Mobile responsive design",
-        "Basic SEO structure",
-        "Content guidance & CTA suggestions",
-        "Domain, hosting & analytics setup",
-        "Contact form integration"
+        "Custom website design (up to 5 pages)",
+        "Mobile & tablet responsive layout",
+        "Clean UI with conversion-focused sections",
+        "Basic on-page SEO structure",
+        "Contact form & CTA integration",
+        "Speed & performance optimization",
+        "Deployment support"
       ],
-      buttonText: "Get a Custom Quote",
+      buttonText: "Build My Website",
       badge: "Most Popular"
     },
     {
-      name: "🟢 UI/UX Product Experience Package",
-      tagline: "Perfect for SaaS, dashboards, and mobile/web apps",
+      name: "🎨 UI/UX Design Package",
+      tagline: "Design experiences users love to use",
       includes: [
-        "User flows & wireframes",
-        "Full UI design system",
+        "User research & journey mapping",
+        "Wireframes & user flows",
+        "Modern UI design system",
         "Up to 20 screens/pages",
-        "Prototype for testing",
-        "Developer-ready handoff"
+        "Interactive prototype",
+        "Developer-ready handoff (Figma)",
+        "Responsive design for web & mobile",
+        "Usability testing & design improvements"
       ],
-      buttonText: "Start UI/UX Project",
+      buttonText: "Start UI/UX Design",
       badge: "UI/UX"
     },
     {
-      name: "🔵 E-Commerce Store Launch Package",
-      tagline: "For businesses ready to sell online",
+      name: "🛒 E-Commerce Store Package",
+      tagline: "Everything you need to start selling online",
       includes: [
-        "Custom storefront design",
-        "Product page layout",
-        "Payment & checkout integration",
-        "Basic inventory setup",
-        "SEO & analytics ready"
+        "Custom e-commerce storefront design",
+        "Product & category page layouts",
+        "Cart & checkout flow",
+        "Payment gateway integration",
+        "Basic product upload setup",
+        "SEO-friendly structure",
+        "Analytics & tracking setup"
       ],
       buttonText: "Launch My Store",
       badge: "E-Commerce"
     },
     {
-      name: "🟣 Mobile App UI Design Package",
-      tagline: "App design that feels modern and consistent",
+      name: "📱 Mobile App UI Package",
+      tagline: "App UI that feels smooth, modern, and intuitive",
       includes: [
-        "App user journey mapping",
-        "Up to 25 screens",
-        "Icon & typography system",
-        "Prototyping & animations"
+        "App user flow & screen planning",
+        "Up to 25 mobile app screens",
+        "iOS & Android–ready UI design",
+        "Design system (colors, typography, icons)",
+        "Clickable prototype",
+        "Handoff for developers"
       ],
-      buttonText: "Design My App UI",
+      buttonText: "Design My App",
       badge: "Mobile"
     },
     {
-      name: "🟠 Brand Identity & Graphics Package",
-      tagline: "A brand look that feels professional",
+      name: "🎯 Graphic Design Package",
+      tagline: "Visuals that strengthen your brand identity",
       includes: [
-        "Logo + variations",
-        "Color & typography system",
-        "Social media kit",
-        "Brand usage guideline (PDF)"
+        "Logo design or refinement",
+        "Brand color & typography system",
+        "Social media post templates",
+        "Marketing & promo graphics",
+        "Brand guideline PDF",
+        "Revisions & final export"
       ],
-      buttonText: "Build My Brand",
-      badge: "Brand"
+      buttonText: "Create My Brand",
+      badge: "Design"
     },
     {
-      name: "🟡 Digital Marketing & Growth Package (Monthly)",
-      tagline: "Monthly growth partner support",
+      name: "🚀 Digital Marketing Package",
+      tagline: "Monthly growth-focused digital marketing support",
       includes: [
-        "Content & campaign strategy",
-        "Performance review & optimization",
-        "Landing page / funnel support",
-        "Consultation & guidance"
+        "Paid ads management (Google & Meta)",
+        "SEO strategy & optimization",
+        "Content & campaign planning",
+        "Landing page & funnel optimization",
+        "Performance tracking & reporting",
+        "Monthly strategy & growth consultation"
       ],
-      buttonText: "Join Growth Partner Plan",
+      buttonText: "Start Growth Plan",
       badge: "Growth"
     }
   ];
@@ -266,8 +280,23 @@ export default function Home() {
             </MagneticButton>
 
             <div className="hr"></div>
-            <div className="small">
-              Trusted by startups, entrepreneurs, small businesses, and emerging brands worldwide.
+            <div
+              style={{
+                padding: "10px 22px",
+                fontSize: "13.5px",
+                color: "rgba(229, 231, 235, 0.9)",
+                letterSpacing: "0.4px",
+                borderRadius: "999px",
+
+                background:
+                  "linear-gradient(180deg, rgba(124, 58, 237, 0.12), rgba(124, 58, 237, 0.06))",
+                border: "1px solid rgba(124, 58, 237, 0.25)",
+                backdropFilter: "blur(12px)",
+
+                boxShadow: "inset 0 0 20px rgba(124, 58, 237, 0.15)",
+              }}
+            >
+              Trusted by startups, entrepreneurs, and growing businesses worldwide.
             </div>
 
             <div className="logoRow">
@@ -277,14 +306,7 @@ export default function Home() {
         </div>
       </header>
 
-      {/* TRUST STRIP */}
-      <section className="strip">
-        <div className="container">
-          <div className="small">
-            Trusted by startups, entrepreneurs, and growing businesses worldwide.
-          </div>
-        </div>
-      </section>
+
 
       {/* SERVICES */}
       <Section
@@ -322,30 +344,53 @@ export default function Home() {
         </motion.div>
       </Section>
 
-      {/* WHY CHOOSE US */}
-      <Section id="about" title="Why Work With TynecXio?" subtitle="">
-        <motion.div
-          className="grid grid2"
-          variants={stagger}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          {[
-            "🎯 Design with business & conversion in mind",
-            "⚡ Startup-friendly process and timelines",
-            "🤝 Clear communication & transparent pricing",
-            "🌍 Remote-friendly, international-ready workflow",
-            "🧠 Strategy + Design + Development + Growth in one place"
-          ].map((x) => (
-            <motion.div key={x} className="card soft lift" style={{ fontWeight: 900 }} variants={fadeUp}>
-              {x}
-            </motion.div>
-          ))}
-        </motion.div>
-      </Section>
+<Section id="about" title="Why Work With TynecXio?" subtitle="">
+  <motion.div
+    className="grid grid2"
+    variants={stagger}
+    initial="hidden"
+    whileInView="show"
+    viewport={{ once: true, amount: 0.2 }}
+  >
+    <motion.div className="card soft lift" variants={fadeUp}>
+      <div style={{ display: "flex", alignItems: "center", gap: "8px", fontWeight: 900 }}>
+        <FaBullseye style={{ fontSize: "20px", transform: "translateY(2px)" }} />
+        <div>Design with business & conversion in mind</div>
+      </div>
+    </motion.div>
 
-    
+    <motion.div className="card soft lift" variants={fadeUp}>
+      <div style={{ display: "flex", alignItems: "center", gap: "8px", fontWeight: 900 }}>
+        <FaBolt style={{ fontSize: "20px", transform: "translateY(2px)" }} />
+        <div>Startup-friendly process and timelines</div>
+      </div>
+    </motion.div>
+
+    <motion.div className="card soft lift" variants={fadeUp}>
+      <div style={{ display: "flex", alignItems: "center", gap: "8px", fontWeight: 900 }}>
+        <FaHandshake style={{ fontSize: "20px", transform: "translateY(2px)" }} />
+        <div>Clear communication & transparent pricing</div>
+      </div>
+    </motion.div>
+
+    <motion.div className="card soft lift" variants={fadeUp}>
+      <div style={{ display: "flex", alignItems: "center", gap: "8px", fontWeight: 900 }}>
+        <FaGlobe style={{ fontSize: "20px", transform: "translateY(2px)" }} />
+        <div>Remote-friendly, international-ready workflow</div>
+      </div>
+    </motion.div>
+
+    <motion.div className="card soft lift" variants={fadeUp}>
+      <div style={{ display: "flex", alignItems: "center", gap: "8px", fontWeight: 900 }}>
+        <FaCogs style={{ fontSize: "20px", transform: "translateY(2px)" }} />
+        <div>Strategy + Design + Development + Growth in one place</div>
+      </div>
+    </motion.div>
+  </motion.div>
+</Section>
+
+
+
 
       {/* PACKAGES */}
       <Section id="packages" title="📦 Package System" subtitle="">
@@ -432,11 +477,12 @@ export default function Home() {
             </p>
 
             <div className="contactPoints">
-              <div>⚡ Fast turnaround & startup-friendly process</div>
-              <div>🎯 Design focused on conversion & growth</div>
-              <div>🌍 Remote collaboration, global clients</div>
-              <div>🤝 Clear communication & honest pricing</div>
+              <div><FaBolt /> Fast turnaround & startup-friendly process</div>
+              <div><FaBullseye /> Design focused on conversion & growth</div>
+              <div><FaGlobe /> Remote collaboration, global clients</div>
+              <div><FaHandshake /> Clear communication & honest pricing</div>
             </div>
+
 
             <div className="contactMini">
               <div className="miniStep">1. Discovery Call</div>
