@@ -371,7 +371,7 @@ export default function Home() {
       </Section>
 
       {/* PACKAGES */}
-      <Section id="packages" title="📦 Package System (With Pricing)" subtitle="">
+      <Section id="packages" title="📦 Package System" subtitle="">
         <motion.div
           className="grid grid3"
           variants={stagger}
