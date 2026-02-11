@@ -9,7 +9,6 @@ export default function Navbar() {
     ["Home", "#home"],
     ["Services", "#services"],
     ["Packages", "#packages"],
-    ["Process", "#process"],
     ["Portfolio", "#portfolio"],
     ["About", "#about"],
     ["Contact", "#contact"]
