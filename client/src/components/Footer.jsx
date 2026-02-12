@@ -52,14 +52,18 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Contact */}
-        <div className="footerCol">
-          <div className="footerTitle">Contact</div>
-          <div className="footerContact">
-            <div><FiMail /> career@tynecxio.com</div>
-            <div><FiGlobe /> Working Worldwide</div>
+        <div className="footerContact">
+          <div className="contactItem">
+            <FiMail className="contactIcon" />
+            <span>career@tynecxio.com</span>
+          </div>
+
+          <div className="contactItem">
+            <FiGlobe className="contactIcon" />
+            <span>Working Worldwide</span>
           </div>
         </div>
+
 
       </div>
 

@@ -988,3 +988,14 @@ select.input option {
   font-size: 13px;
   opacity: 0.6;
 }
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contactIcon {
+  position: relative;
+  top: 2px; /* adjust: try 1–3px */
+}
+
