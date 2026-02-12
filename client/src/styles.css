@@ -890,3 +890,101 @@ select.input option {
 .feature-text {
   color: #E5E7EB; /* soft gray instead of white */
 }
+
+/* For Navbar */
+.footer {
+  margin-top: 80px;
+  padding: 60px 0 30px;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 15, 20, 1),
+    rgba(10, 10, 15, 1)
+  );
+  border-top: 1px solid rgba(124, 58, 237, 0.2);
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.footerLogo {
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 14px;
+}
+
+.footerDesc {
+  font-size: 14px;
+  opacity: 0.7;
+  line-height: 1.6;
+}
+
+.footerTitle {
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.footerCol ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerCol li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  opacity: 0.75;
+}
+
+.footerCol a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.footerCol a:hover {
+  opacity: 1;
+}
+
+.footerContact div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  opacity: 0.75;
+}
+
+.footerSocial {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footerSocial a {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+
+  background: rgba(124, 58, 237, 0.12);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+
+  transition: all 0.3s ease;
+}
+
+.footerSocial a:hover {
+  transform: translateY(-3px);
+  background: rgba(124, 58, 237, 0.25);
+}
+
+.footerBottom {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 13px;
+  opacity: 0.6;
+}
