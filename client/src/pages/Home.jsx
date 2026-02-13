@@ -9,20 +9,20 @@ import ServiceCard from "../components/ServiceCard.jsx";
 import PackageCard from "../components/PackageCard.jsx";
 import FAQItem from "../components/FAQItem.jsx";
 import ContactForm from "../components/ContactForm.jsx";
-import { 
-  FaBullseye, 
-  FaBolt, 
-  FaHandshake, 
-  FaGlobe, 
-  FaCogs, 
-  FaRocket, 
-  FaGem, 
-  FaBolt as FaLightning, 
-  FaCrown, 
-  FaMagic, 
-  FaStar, 
-  FaCrosshairs, 
-  FaCompass, 
+import {
+  FaBullseye,
+  FaBolt,
+  FaHandshake,
+  FaGlobe,
+  FaCogs,
+  FaRocket,
+  FaGem,
+  FaBolt as FaLightning,
+  FaCrown,
+  FaMagic,
+  FaStar,
+  FaCrosshairs,
+  FaCompass,
   FaAtom,
   FaPaintBrush,
   FaLaptopCode,
@@ -54,73 +54,73 @@ export default function Home() {
     "Digital marketing & growth strategy"
   ];
 
- const services = [
-  {
-    title: "UI/UX Design for Web & Mobile Apps",
-    bullets: [
-      "User research, user flows & wireframes",
-      "Modern interface design for SaaS, dashboards & tools",
-      "Mobile app UI for Android / iOS",
-      "Prototypes & usability-focused layouts"
-    ],
-    outcome: "Clean, intuitive, user-friendly digital products.",
-    icon: <FaPaintBrush style={{ color: "#8B5CF6", fontSize: "24px" }} />
-  },
-  {
-    title: "Website & Web Application Development",
-    bullets: [
-      "Business & portfolio websites",
-      "Landing pages for startups & launches",
-      "Custom frontend development",
-      "Fast, secure, responsive, SEO-friendly builds"
-    ],
-    outcome: "Professional online presence that builds trust.",
-    icon: <FaLaptopCode style={{ color: "#EC4899", fontSize: "24px" }} />
-  },
-  {
-    title: "E-Commerce Website & Online Store Development",
-    bullets: [
-      "Modern product-first storefront design",
-      "Secure checkout & payment integrations",
-      "Conversion-optimized product pages",
-      "Basic analytics & inventory setup"
-    ],
-    outcome: "A store ready to sell from day one.",
-    icon: <FaShoppingCart style={{ color: "#F59E0B", fontSize: "24px" }} />
-  },
-  {
-    title: "Mobile App UI Design",
-    bullets: [
-      "Screens, flows, and user journeys",
-      "Clean, modern, consistent layouts",
-      "Handoff-ready designs for developers"
-    ],
-    outcome: "App interfaces users love to interact with.",
-    icon: <FaMobileAlt style={{ color: "#10B981", fontSize: "24px" }} />
-  },
-  {
-    title: "Brand Identity & Graphic Design",
-    bullets: [
-      "Logo + identity system",
-      "Color palette & typography",
-      "Social media & web graphics",
-      "Marketing visuals & brand assets"
-    ],
-    outcome: "A brand look that feels professional and memorable.",
-    icon: <FaPalette style={{ color: "#F97316", fontSize: "24px" }} />
-  },
-  {
-    title: "Modern Digital Marketing & Growth Support",
-    bullets: [
-      "Launch & growth strategy",
-      "Content & campaign direction",
-      "Basic ad strategy & funnel guidance",
-      "Consultation & performance review"
-    ],
-    outcome: "Visibility, awareness, and smarter scaling.",
-    icon: <FaChartLine style={{ color: "#EF4444", fontSize: "24px" }} />
-  }
-];
+  const services = [
+    {
+      title: "UI/UX Design for Web & Mobile Apps",
+      bullets: [
+        "User research, user flows & wireframes",
+        "Modern interface design for SaaS, dashboards & tools",
+        "Mobile app UI for Android / iOS",
+        "Prototypes & usability-focused layouts"
+      ],
+      outcome: "Clean, intuitive, user-friendly digital products.",
+      icon: <FaPaintBrush style={{ color: "#8B5CF6", fontSize: "24px" }} />
+    },
+    {
+      title: "Website & Web Application Development",
+      bullets: [
+        "Business & portfolio websites",
+        "Landing pages for startups & launches",
+        "Custom frontend development",
+        "Fast, secure, responsive, SEO-friendly builds"
+      ],
+      outcome: "Professional online presence that builds trust.",
+      icon: <FaLaptopCode style={{ color: "#EC4899", fontSize: "24px" }} />
+    },
+    {
+      title: "E-Commerce Website & Online Store Development",
+      bullets: [
+        "Modern product-first storefront design",
+        "Secure checkout & payment integrations",
+        "Conversion-optimized product pages",
+        "Basic analytics & inventory setup"
+      ],
+      outcome: "A store ready to sell from day one.",
+      icon: <FaShoppingCart style={{ color: "#F59E0B", fontSize: "24px" }} />
+    },
+    {
+      title: "Mobile App UI Design",
+      bullets: [
+        "Screens, flows, and user journeys",
+        "Clean, modern, consistent layouts",
+        "Handoff-ready designs for developers"
+      ],
+      outcome: "App interfaces users love to interact with.",
+      icon: <FaMobileAlt style={{ color: "#10B981", fontSize: "24px" }} />
+    },
+    {
+      title: "Brand Identity & Graphic Design",
+      bullets: [
+        "Logo + identity system",
+        "Color palette & typography",
+        "Social media & web graphics",
+        "Marketing visuals & brand assets"
+      ],
+      outcome: "A brand look that feels professional and memorable.",
+      icon: <FaPalette style={{ color: "#F97316", fontSize: "24px" }} />
+    },
+    {
+      title: "Modern Digital Marketing & Growth Support",
+      bullets: [
+        "Launch & growth strategy",
+        "Content & campaign direction",
+        "Basic ad strategy & funnel guidance",
+        "Consultation & performance review"
+      ],
+      outcome: "Visibility, awareness, and smarter scaling.",
+      icon: <FaChartLine style={{ color: "#EF4444", fontSize: "24px" }} />
+    }
+  ];
   // Package for services
 
   const packages = [
@@ -257,8 +257,8 @@ export default function Home() {
         <div className="container heroWrap">
           {/* LEFT */}
           <motion.div initial="hidden" animate="show" variants={stagger}>
-            <motion.div 
-              className="badge" 
+            <motion.div
+              className="badge"
               variants={fadeUp}
               style={{
                 display: "flex",
@@ -269,11 +269,11 @@ export default function Home() {
             >
               {/* Premium animated icon - FaRocket */}
               <motion.div
-                animate={{ 
+                animate={{
                   y: [0, -5, 0],
                   rotate: [0, 5, -5, 0],
                 }}
-                transition={{ 
+                transition={{
                   duration: 3,
                   repeat: Infinity,
                   ease: "easeInOut"
@@ -286,7 +286,7 @@ export default function Home() {
               >
                 <FaRocket />
               </motion.div>
-              
+
               {/* Animated text with sliding effect */}
               <motion.div
                 style={{
@@ -300,7 +300,7 @@ export default function Home() {
                     key={item}
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
-                    transition={{ 
+                    transition={{
                       delay: index * 0.15,
                       duration: 0.5,
                       ease: "easeOut"
@@ -319,11 +319,11 @@ export default function Home() {
                     {item}
                     {index < 2 && (
                       <motion.span
-                        animate={{ 
+                        animate={{
                           opacity: [1, 0.5, 1],
                           x: [0, 2, 0]
                         }}
-                        transition={{ 
+                        transition={{
                           duration: 2,
                           repeat: Infinity,
                           delay: index * 0.3
@@ -518,8 +518,11 @@ export default function Home() {
         </motion.div>
       </Section>
 
-      {/* PORTFOLIO */}
-      <Section id="portfolio" title="Recent Work & Focus Areas" subtitle="We love working on:">
+      <Section
+        id="portfolio"
+        title={<span className="highlight-title">Recent Work & Focus Areas</span>}
+        subtitle="We love working on:"
+      >
         <motion.div
           className="grid grid2"
           variants={stagger}

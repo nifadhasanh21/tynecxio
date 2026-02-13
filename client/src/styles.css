@@ -1381,3 +1381,15 @@ select.input option {
   font-weight: 600;
   margin-bottom: 8px;
 }
+
+/* Updated Recent Work & Focus Areas */
+.highlight-title {
+  background: linear-gradient(90deg, #ff6a00, #ffcc00); /* vibrant gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 2.5rem; /* bigger size attracts attention */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: transform 0.3s, filter 0.3s;
+}
