@@ -81,7 +81,7 @@ export default function Footer() {
 
       {/* Bottom Strip */}
       <div className="footerBottom">
-        © 2025 TynecXio. All Rights Reserved.
+        © 2026 TynecXio. All Rights Reserved.
       </div>
     </footer>
   );

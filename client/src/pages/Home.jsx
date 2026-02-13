@@ -9,7 +9,28 @@ import ServiceCard from "../components/ServiceCard.jsx";
 import PackageCard from "../components/PackageCard.jsx";
 import FAQItem from "../components/FAQItem.jsx";
 import ContactForm from "../components/ContactForm.jsx";
-import { FaBullseye, FaBolt, FaHandshake, FaGlobe, FaCogs } from "react-icons/fa";
+import { 
+  FaBullseye, 
+  FaBolt, 
+  FaHandshake, 
+  FaGlobe, 
+  FaCogs, 
+  FaRocket, 
+  FaGem, 
+  FaBolt as FaLightning, 
+  FaCrown, 
+  FaMagic, 
+  FaStar, 
+  FaCrosshairs, 
+  FaCompass, 
+  FaAtom,
+  FaPaintBrush,
+  FaLaptopCode,
+  FaShoppingCart,
+  FaMobileAlt,
+  FaPalette,
+  FaChartLine
+} from "react-icons/fa";
 
 
 
@@ -33,67 +54,74 @@ export default function Home() {
     "Digital marketing & growth strategy"
   ];
 
-  const services = [
-    {
-      title: "🟣 UI/UX Design for Web & Mobile Apps",
-      bullets: [
-        "User research, user flows & wireframes",
-        "Modern interface design for SaaS, dashboards & tools",
-        "Mobile app UI for Android / iOS",
-        "Prototypes & usability-focused layouts"
-      ],
-      outcome: "Clean, intuitive, user-friendly digital products."
-    },
-    {
-      title: "🟣 Website & Web Application Development",
-      bullets: [
-        "Business & portfolio websites",
-        "Landing pages for startups & launches",
-        "Custom frontend development",
-        "Fast, secure, responsive, SEO-friendly builds"
-      ],
-      outcome: "Professional online presence that builds trust."
-    },
-    {
-      title: "🟣 E-Commerce Website & Online Store Development",
-      bullets: [
-        "Modern product-first storefront design",
-        "Secure checkout & payment integrations",
-        "Conversion-optimized product pages",
-        "Basic analytics & inventory setup"
-      ],
-      outcome: "A store ready to sell from day one."
-    },
-    {
-      title: "🟣 Mobile App UI Design",
-      bullets: [
-        "Screens, flows, and user journeys",
-        "Clean, modern, consistent layouts",
-        "Handoff-ready designs for developers"
-      ],
-      outcome: "App interfaces users love to interact with."
-    },
-    {
-      title: "🟣 Brand Identity & Graphic Design",
-      bullets: [
-        "Logo + identity system",
-        "Color palette & typography",
-        "Social media & web graphics",
-        "Marketing visuals & brand assets"
-      ],
-      outcome: "A brand look that feels professional and memorable."
-    },
-    {
-      title: "🟣 Modern Digital Marketing & Growth Support",
-      bullets: [
-        "Launch & growth strategy",
-        "Content & campaign direction",
-        "Basic ad strategy & funnel guidance",
-        "Consultation & performance review"
-      ],
-      outcome: "Visibility, awareness, and smarter scaling."
-    }
-  ];
+ const services = [
+  {
+    title: "UI/UX Design for Web & Mobile Apps",
+    bullets: [
+      "User research, user flows & wireframes",
+      "Modern interface design for SaaS, dashboards & tools",
+      "Mobile app UI for Android / iOS",
+      "Prototypes & usability-focused layouts"
+    ],
+    outcome: "Clean, intuitive, user-friendly digital products.",
+    icon: <FaPaintBrush style={{ color: "#8B5CF6", fontSize: "24px" }} />
+  },
+  {
+    title: "Website & Web Application Development",
+    bullets: [
+      "Business & portfolio websites",
+      "Landing pages for startups & launches",
+      "Custom frontend development",
+      "Fast, secure, responsive, SEO-friendly builds"
+    ],
+    outcome: "Professional online presence that builds trust.",
+    icon: <FaLaptopCode style={{ color: "#EC4899", fontSize: "24px" }} />
+  },
+  {
+    title: "E-Commerce Website & Online Store Development",
+    bullets: [
+      "Modern product-first storefront design",
+      "Secure checkout & payment integrations",
+      "Conversion-optimized product pages",
+      "Basic analytics & inventory setup"
+    ],
+    outcome: "A store ready to sell from day one.",
+    icon: <FaShoppingCart style={{ color: "#F59E0B", fontSize: "24px" }} />
+  },
+  {
+    title: "Mobile App UI Design",
+    bullets: [
+      "Screens, flows, and user journeys",
+      "Clean, modern, consistent layouts",
+      "Handoff-ready designs for developers"
+    ],
+    outcome: "App interfaces users love to interact with.",
+    icon: <FaMobileAlt style={{ color: "#10B981", fontSize: "24px" }} />
+  },
+  {
+    title: "Brand Identity & Graphic Design",
+    bullets: [
+      "Logo + identity system",
+      "Color palette & typography",
+      "Social media & web graphics",
+      "Marketing visuals & brand assets"
+    ],
+    outcome: "A brand look that feels professional and memorable.",
+    icon: <FaPalette style={{ color: "#F97316", fontSize: "24px" }} />
+  },
+  {
+    title: "Modern Digital Marketing & Growth Support",
+    bullets: [
+      "Launch & growth strategy",
+      "Content & campaign direction",
+      "Basic ad strategy & funnel guidance",
+      "Consultation & performance review"
+    ],
+    outcome: "Visibility, awareness, and smarter scaling.",
+    icon: <FaChartLine style={{ color: "#EF4444", fontSize: "24px" }} />
+  }
+];
+  // Package for services
 
   const packages = [
     {
@@ -109,7 +137,8 @@ export default function Home() {
         "Deployment support"
       ],
       buttonText: "Build My Website",
-      badge: "Most Popular"
+      badge: "Most Popular",
+      discount: "65% OFF"
     },
     {
       name: "🎨 UI/UX Design Package",
@@ -119,13 +148,13 @@ export default function Home() {
         "Wireframes & user flows",
         "Modern UI design system",
         "Up to 20 screens/pages",
-        "Interactive prototype",
         "Developer-ready handoff (Figma)",
         "Responsive design for web & mobile",
-        "Usability testing & design improvements"
+        "Usability testing & design improvements in design"
       ],
       buttonText: "Start UI/UX Design",
-      badge: "UI/UX"
+      badge: "UI/UX",
+      discount: "65% OFF"
     },
     {
       name: "🛒 E-Commerce Store Package",
@@ -140,7 +169,8 @@ export default function Home() {
         "Analytics & tracking setup"
       ],
       buttonText: "Launch My Store",
-      badge: "E-Commerce"
+      badge: "E-Commerce",
+      discount: "65% OFF"
     },
     {
       name: "📱 Mobile App UI Package",
@@ -154,7 +184,8 @@ export default function Home() {
         "Handoff for developers"
       ],
       buttonText: "Design My App",
-      badge: "Mobile"
+      badge: "Mobile",
+      discount: "65% OFF"
     },
     {
       name: "🎯 Graphic Design Package",
@@ -164,11 +195,13 @@ export default function Home() {
         "Brand color & typography system",
         "Social media post templates",
         "Marketing & promo graphics",
+        "Brand strategy consulting",
         "Brand guideline PDF",
         "Revisions & final export"
       ],
       buttonText: "Create My Brand",
-      badge: "Design"
+      badge: "Design",
+      discount: "65% OFF"
     },
     {
       name: "🚀 Digital Marketing Package",
@@ -182,7 +215,8 @@ export default function Home() {
         "Monthly strategy & growth consultation"
       ],
       buttonText: "Start Growth Plan",
-      badge: "Growth"
+      badge: "Growth",
+      discount: "65% OFF"
     }
   ];
 
@@ -198,6 +232,7 @@ export default function Home() {
       <ScrollProgress />
       <Navbar />
 
+      {/* Header */}
       {/* HERO */}
       <header id="home" className="hero">
         {/* Animated Gradient Blobs */}
@@ -222,9 +257,85 @@ export default function Home() {
         <div className="container heroWrap">
           {/* LEFT */}
           <motion.div initial="hidden" animate="show" variants={stagger}>
-            <motion.div className="badge" variants={fadeUp}>
-              <span className="spark" />
-              Design • Development • Growth
+            <motion.div 
+              className="badge" 
+              variants={fadeUp}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: "8px",
+                overflow: "hidden"
+              }}
+            >
+              {/* Premium animated icon - FaRocket */}
+              <motion.div
+                animate={{ 
+                  y: [0, -5, 0],
+                  rotate: [0, 5, -5, 0],
+                }}
+                transition={{ 
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+                style={{
+                  display: "inline-flex",
+                  fontSize: "20px",
+                  color: "#8B5CF6"
+                }}
+              >
+                <FaRocket />
+              </motion.div>
+              
+              {/* Animated text with sliding effect */}
+              <motion.div
+                style={{
+                  display: "flex",
+                  gap: "8px",
+                  overflow: "hidden"
+                }}
+              >
+                {["Design", "Development", "Growth"].map((item, index) => (
+                  <motion.span
+                    key={item}
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ 
+                      delay: index * 0.15,
+                      duration: 0.5,
+                      ease: "easeOut"
+                    }}
+                    whileHover={{
+                      scale: 1.1,
+                      color: "#8B5CF6",
+                      transition: { duration: 0.2 }
+                    }}
+                    style={{
+                      display: "inline-block",
+                      position: "relative",
+                      fontWeight: 500
+                    }}
+                  >
+                    {item}
+                    {index < 2 && (
+                      <motion.span
+                        animate={{ 
+                          opacity: [1, 0.5, 1],
+                          x: [0, 2, 0]
+                        }}
+                        transition={{ 
+                          duration: 2,
+                          repeat: Infinity,
+                          delay: index * 0.3
+                        }}
+                        style={{ marginLeft: "8px" }}
+                      >
+                        •
+                      </motion.span>
+                    )}
+                  </motion.span>
+                ))}
+              </motion.div>
             </motion.div>
 
             <motion.h1 className="h1" style={{ marginTop: 18 }} variants={fadeUp}>
@@ -258,7 +369,7 @@ export default function Home() {
             >
               {highlights.map((h) => (
                 <motion.div key={h} className="card soft lift" style={{ padding: 16 }} variants={fadeUp}>
-                  <div className="small">✓</div>
+                  <div className="small" style={{ color: "var(--accent)", fontWeight: 900 }}>✓</div>
                   <div style={{ fontWeight: 900 }}>{h}</div>
                 </motion.div>
               ))}
@@ -279,27 +390,26 @@ export default function Home() {
               Get Started
             </MagneticButton>
 
-            <div className="hr"></div>
+            <div className="hr" style={{ margin: "14px 0" }}></div>
             <div
               style={{
-                padding: "10px 22px",
-                fontSize: "13.5px",
-                color: "rgba(229, 231, 235, 0.9)",
-                letterSpacing: "0.4px",
+                padding: "8px 18px",
+                fontSize: "13px",
+                color: "#1a1a2e",
+                fontWeight: "500",
+                letterSpacing: "0.3px",
                 borderRadius: "999px",
-
-                background:
-                  "linear-gradient(180deg, rgba(124, 58, 237, 0.12), rgba(124, 58, 237, 0.06))",
+                background: "linear-gradient(180deg, rgba(124, 58, 237, 0.12), rgba(124, 58, 237, 0.06))",
                 border: "1px solid rgba(124, 58, 237, 0.25)",
                 backdropFilter: "blur(12px)",
-
                 boxShadow: "inset 0 0 20px rgba(124, 58, 237, 0.15)",
+                marginBottom: "10px",
               }}
             >
               Trusted by startups, entrepreneurs, and growing businesses worldwide.
             </div>
 
-            <div className="logoRow">
+            <div className="logoRow" style={{ marginTop: "6px" }}>
               <img src="/tynecxio-logo.png" alt="Client 1" />
             </div>
           </motion.div>
@@ -307,11 +417,10 @@ export default function Home() {
       </header>
 
 
-
       {/* SERVICES */}
       <Section
         id="services"
-        title="What We Do"
+        title={<span className="section-title-frame">What We Do</span>}
         subtitle="We’re a product-focused digital studio that blends design, development, and marketing to build meaningful, conversion-focused digital experiences."
       >
         <motion.div
@@ -344,50 +453,50 @@ export default function Home() {
         </motion.div>
       </Section>
 
-<Section id="about" title="Why Work With TynecXio?" subtitle="">
-  <motion.div
-    className="grid grid2"
-    variants={stagger}
-    initial="hidden"
-    whileInView="show"
-    viewport={{ once: true, amount: 0.2 }}
-  >
-    <motion.div className="card soft lift" variants={fadeUp}>
-      <div style={{ display: "flex", alignItems: "center", gap: "8px", fontWeight: 900 }}>
-        <FaBullseye style={{ fontSize: "20px", transform: "translateY(2px)" }} />
-        <div>Design with business & conversion in mind</div>
-      </div>
-    </motion.div>
+      <Section id="about" title="Why Work With TynecXio?" subtitle="">
+        <motion.div
+          className="grid grid2"
+          variants={stagger}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          <motion.div className="card soft lift" variants={fadeUp}>
+            <div style={{ display: "flex", alignItems: "center", gap: "8px", fontWeight: 900 }}>
+              <FaBullseye style={{ fontSize: "20px", transform: "translateY(2px)" }} />
+              <div>Design with business & conversion in mind</div>
+            </div>
+          </motion.div>
 
-    <motion.div className="card soft lift" variants={fadeUp}>
-      <div style={{ display: "flex", alignItems: "center", gap: "8px", fontWeight: 900 }}>
-        <FaBolt style={{ fontSize: "20px", transform: "translateY(2px)" }} />
-        <div>Startup-friendly process and timelines</div>
-      </div>
-    </motion.div>
+          <motion.div className="card soft lift" variants={fadeUp}>
+            <div style={{ display: "flex", alignItems: "center", gap: "8px", fontWeight: 900 }}>
+              <FaBolt style={{ fontSize: "20px", transform: "translateY(2px)" }} />
+              <div>Startup-friendly process and timelines</div>
+            </div>
+          </motion.div>
 
-    <motion.div className="card soft lift" variants={fadeUp}>
-      <div style={{ display: "flex", alignItems: "center", gap: "8px", fontWeight: 900 }}>
-        <FaHandshake style={{ fontSize: "20px", transform: "translateY(2px)" }} />
-        <div>Clear communication & transparent pricing</div>
-      </div>
-    </motion.div>
+          <motion.div className="card soft lift" variants={fadeUp}>
+            <div style={{ display: "flex", alignItems: "center", gap: "8px", fontWeight: 900 }}>
+              <FaHandshake style={{ fontSize: "20px", transform: "translateY(2px)" }} />
+              <div>Clear communication & transparent pricing</div>
+            </div>
+          </motion.div>
 
-    <motion.div className="card soft lift" variants={fadeUp}>
-      <div style={{ display: "flex", alignItems: "center", gap: "8px", fontWeight: 900 }}>
-        <FaGlobe style={{ fontSize: "20px", transform: "translateY(2px)" }} />
-        <div>Remote-friendly, international-ready workflow</div>
-      </div>
-    </motion.div>
+          <motion.div className="card soft lift" variants={fadeUp}>
+            <div style={{ display: "flex", alignItems: "center", gap: "8px", fontWeight: 900 }}>
+              <FaGlobe style={{ fontSize: "20px", transform: "translateY(2px)" }} />
+              <div>Remote-friendly, international-ready workflow</div>
+            </div>
+          </motion.div>
 
-    <motion.div className="card soft lift" variants={fadeUp}>
-      <div style={{ display: "flex", alignItems: "center", gap: "8px", fontWeight: 900 }}>
-        <FaCogs style={{ fontSize: "20px", transform: "translateY(2px)" }} />
-        <div>Strategy + Design + Development + Growth in one place</div>
-      </div>
-    </motion.div>
-  </motion.div>
-</Section>
+          <motion.div className="card soft lift" variants={fadeUp}>
+            <div style={{ display: "flex", alignItems: "center", gap: "8px", fontWeight: 900 }}>
+              <FaCogs style={{ fontSize: "20px", transform: "translateY(2px)" }} />
+              <div>Strategy + Design + Development + Growth in one place</div>
+            </div>
+          </motion.div>
+        </motion.div>
+      </Section>
 
 
 
