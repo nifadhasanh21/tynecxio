@@ -138,7 +138,7 @@ export default function Home() {
       ],
       buttonText: "Build My Website",
       badge: "Most Popular",
-      discount: "65% OFF"
+      discount: "35% OFF"
     },
     {
       name: "🎨 UI/UX Design Package",
@@ -154,7 +154,7 @@ export default function Home() {
       ],
       buttonText: "Start UI/UX Design",
       badge: "UI/UX",
-      discount: "65% OFF"
+      discount: "35% OFF"
     },
     {
       name: "🛒 E-Commerce Store Package",
@@ -170,7 +170,7 @@ export default function Home() {
       ],
       buttonText: "Launch My Store",
       badge: "E-Commerce",
-      discount: "65% OFF"
+      discount: "30% OFF"
     },
     {
       name: "📱 Mobile App UI Package",
@@ -185,7 +185,7 @@ export default function Home() {
       ],
       buttonText: "Design My App",
       badge: "Mobile",
-      discount: "65% OFF"
+      discount: "35% OFF"
     },
     {
       name: "🎯 Graphic Design Package",
@@ -201,7 +201,7 @@ export default function Home() {
       ],
       buttonText: "Create My Brand",
       badge: "Design",
-      discount: "65% OFF"
+      discount: "45% OFF"
     },
     {
       name: "🚀 Digital Marketing Package",
@@ -216,7 +216,7 @@ export default function Home() {
       ],
       buttonText: "Start Growth Plan",
       badge: "Growth",
-      discount: "65% OFF"
+      discount: "40% OFF"
     }
   ];
 
