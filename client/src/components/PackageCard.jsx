@@ -1,7 +1,4 @@
-export default function PackageCard({ name, tagline, includes, timeline, price, buttonText, badge }) {
-  // Calculate discount percentage (you'll need to pass this as a prop or calculate)
-  const discountPercentage = "65% OFF"; // Example - you'll need to pass this dynamically
-
+export default function PackageCard({ name, tagline, includes, timeline, price, buttonText, badge, discount }) {
   // Add this color mapping object
   const badgeColors = {
     'Most Popular': { background: '#FF6B6B', shadow: '0 4px 15px rgba(255, 107, 107, 0.3)' },
@@ -29,7 +26,21 @@ export default function PackageCard({ name, tagline, includes, timeline, price, 
           >
             {badge}
           </span>
-          <span className="discount-badge">{discountPercentage}</span>
+          {/* Add styling to make discount badge visible */}
+          <span 
+            className="discount-badge"
+            style={{
+              background: 'linear-gradient(135deg, #FFD700, #FFA500)',
+              color: '#000',
+              fontWeight: 'bold',
+              padding: '4px 12px',
+              borderRadius: '20px',
+              fontSize: '0.9rem',
+              boxShadow: '0 2px 10px rgba(255, 215, 0, 0.3)'
+            }}
+          >
+            {discount}
+          </span>
         </div>
       )}
 
